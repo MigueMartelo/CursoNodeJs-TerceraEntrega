@@ -1,6 +1,6 @@
-# Entrega 2
+# Entrega 3
 
-Entrega 2 para el curso de NodeJS con el Tecnológico de Antioquia
+Entrega 3 para el curso de NodeJS con el Tecnológico de Antioquia
 
 ## Ejecutar para inicar el proyecto
 
