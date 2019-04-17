@@ -50,6 +50,7 @@
         {{/if}}
       </ul>
       {{#if session}}
+      {{#else}}
       <form action="/ingresar" class="form-inline my-2 my-lg-0 pl-4" method="post">
         <input type="text" name="doc_identidad" class="form-control mr-sm-2" placeholder="Doc Identidad">
         <input type="password" name="password" class="form-control mr-sm-2" placeholder="Password">
