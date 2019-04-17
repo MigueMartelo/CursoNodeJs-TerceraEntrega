@@ -1,0 +1,64 @@
+{{>header}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 jumbotron mt-4">
+      <h1>Bienvenidos a la Universidad Virtual</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md">
+      {{#if mensaje}}
+      <p class="text-center">{{mensaje}}</p>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="row">
+    {{#if coordinador}}
+    <div class="col-md-3">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <a href="/crearcurso" class="btn btn-primary btn-block">Crear Cursos</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{#if aspirante}}
+    <div class="col-md-3">
+      <div class="card text-white bg-success">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <a href="/cursosdisponibles" class="btn btn-success btn-block">Cursos Disponibles</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-warning">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <a href="/inscribir" class="btn btn-warning btn-block">Inscribir</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+    {{#if coordinador}}
+    <div class="col-md-3">
+      <div class="card text-white bg-info">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <a href="/inscritos" class="btn btn-info btn-block">Ver Inscritos</a>
+          </h5>
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>
+
+{{>footer}}

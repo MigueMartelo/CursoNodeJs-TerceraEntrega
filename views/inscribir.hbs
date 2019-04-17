@@ -1,0 +1,50 @@
+{{>header}}
+
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-md-12 jumbotron mt-4">
+      <h1>{{titulo}}</h1>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-8">{{#if mensaje}} {{mensaje}} {{/if}}</div>
+  </div>
+
+  <div class="row justify-content-md-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <form action="/inscribir" class="form-group" method="POST">
+            <div class="form-group">
+              <label for="doc_identidad">Documento de Indentidad</label>
+              <input type="text" name="doc_identidad" class="form-control" value={{doc_identidad}}>
+            </div>
+            <div class="form-group">
+              <label for="nombre">Nombre del Aspirante</label>
+              <input type="text" name="nombre" class="form-control" value={{nombre}}>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" name="email" class="form-control" value={{email}}>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Número de Teléfono</label>
+              <input type="tel" name="telefono" class="form-control" value={{telefono}}>
+            </div>
+            <div class="form-group">
+              <label for="nombre_curso">Curso a inscribirse</label>
+              <select name="nombre_curso" class="form-control" required>
+                {{{cursosInscribir cursosDisponibles}}}
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Inscribir</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{{>footer}}
